@@ -41,7 +41,7 @@ void setup() {
   pinMode(side_sensor, INPUT);
   pinMode(front_sensor, INPUT);
   Serial.begin(115200);
-  delay(100);
+  delay(2000);
   update_sensors();
 }
 
@@ -83,8 +83,8 @@ void loop() {
       digitalWrite(motor_pin2, HIGH);
       digitalWrite(motor_pin3, HIGH);
       digitalWrite(motor_pin4, LOW);
-      int temp = random(300, 700);
-      delay(temp);
+      int temp = random(0, 2);
+      delay(temp * 150 + 160);
     } else {
       digitalWrite(motor_pin1, LOW);
       digitalWrite(motor_pin2, HIGH);
